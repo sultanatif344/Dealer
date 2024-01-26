@@ -7,7 +7,7 @@ const SignIn = () => {
     const [password, setPassword] = useState("");
     return (
         <View style={{ flex: 1, justifyContent: 'center', alignItems: 'center' }}>
-            <View >
+            <View>
                 <Card
                     style={{
                         backgroundColor: 'white',

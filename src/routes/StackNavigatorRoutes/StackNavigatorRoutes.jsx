@@ -7,7 +7,7 @@ import { COLORS } from '../../constants/constants';
 const StackNavigatorRoutes = () => {
     const Stack = createStackNavigator();
     return (
-        <Stack.Navigator initialRouteName='Splash'>
+        <Stack.Navigator initialRouteName='HomeScreen'>
             <Stack.Screen name="Splash" component={Splash}
                 options={{
                     title: ' ',
@@ -38,7 +38,19 @@ const StackNavigatorRoutes = () => {
                     }
                 }}
                 name="SignIn" component={SignIn} />
-            <Stack.Screen name="HomeScreen" component={TabNavigatorRoutes}></Stack.Screen>
+            <Stack.Screen
+                options={{
+                    title: ' ',
+                    headerLeft: () => null,
+                    headerStyle: {
+                        height: 0,
+                        shadowColor: 'transparent',
+                        borderBottomWidth: 0,
+                        elevation: 0,
+
+                    },
+                }}
+                name="HomeScreen" component={TabNavigatorRoutes}></Stack.Screen>
         </Stack.Navigator>
     )
 }
